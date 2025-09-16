@@ -26,6 +26,7 @@ class ScannerTest(BaseTestCase):
         self.tools = [i for i in tools if i not in self.remove_items]
         self.tests = [i for i in tests if i not in self.remove_items]
 
+    
     def test_check_test_file(self):
         missing_tests = ['MISSING TEST FOLDER']
         for tool in self.tools:
@@ -268,3 +269,4 @@ if __name__ == "__main__":
     ret = not runner.run(suite()).wasSuccessful()
     BaseTestCase.tearDownDriver()
     sys.exit(ret)
+
