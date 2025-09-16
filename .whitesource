@@ -27,7 +27,7 @@
       ],
       "projectName": "Jenkins-components-SAST"
     }
-  ]
+  ],
   "checkRunSettings": {
     "vulnerableCheckRunConclusionLevel": "failure",
     "displayMode": "diff",
