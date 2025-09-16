@@ -12,6 +12,22 @@
     "baseBranches": [],
     "snippetSize": 10
   },
+  "scanProfiles": [
+    {
+      "name": "tests-Profile",
+      "includes": [
+        "tests/"
+      ],
+      "projectName": "Jenkins-tests-SAST"
+    },
+    {
+      "name": "components-Profile",
+      "includes": [
+        "components/"
+      ],
+      "projectName": "Jenkins-components-SAST"
+    }
+  ]
   "checkRunSettings": {
     "vulnerableCheckRunConclusionLevel": "failure",
     "displayMode": "diff",
