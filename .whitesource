@@ -16,13 +16,13 @@
     {
       "name": "Jenkins-tests-SAST",
       "paths": [
-        "/tests/"
+        "tests/"
       ]
     },
     {
       "name": "Jenkins-components-SAST",
       "paths": [
-        "/components/"
+        "components/"
       ]
     }
   ],
