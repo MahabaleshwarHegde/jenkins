@@ -12,20 +12,6 @@
     "baseBranches": [],
     "snippetSize": 10
   },
-  "projects": [
-    {
-      "name": "Jenkins-tests-SAST",
-      "paths": [
-        "tests/"
-      ]
-    },
-    {
-      "name": "Jenkins-components-SAST",
-      "paths": [
-        "components/"
-      ]
-    }
-  ],
   "checkRunSettings": {
     "vulnerableCheckRunConclusionLevel": "failure",
     "displayMode": "diff",
