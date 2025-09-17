@@ -26,10 +26,18 @@ jobs:
       #     MEND_USER_KEY: ${{ secrets.MEND_USER_KEY }}
       #   run: mend auth login
 
-      - name: Run Mend Code Scan
+      - name: Run Mend Code Scan for tests folder
         env:
           MEND_URL: ${{ secrets.MEND_URL }}
           MEND_EMAIL: ${{ secrets.MEND_EMAIL }}
           MEND_USER_KEY: ${{ secrets.MEND_USER_KEY }}
         run: |
-          mend code -s "Mitel UC Test//BB_MahabaleshwarHegde//GH_Jenkins_master"
+          mend code -d "tests/"-s "Mitel UC Test//BB_MahabaleshwarHegde//GH_Jenkins_tests"
+      
+      - name: Run Mend Code Scan for componenet folder
+        env:
+          MEND_URL: ${{ secrets.MEND_URL }}
+          MEND_EMAIL: ${{ secrets.MEND_EMAIL }}
+          MEND_USER_KEY: ${{ secrets.MEND_USER_KEY }}
+        run: |
+          mend code -d "components/"-s "Mitel UC Test//BB_MahabaleshwarHegde//GH_Jenkins_components"
