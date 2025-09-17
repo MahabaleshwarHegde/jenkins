@@ -32,7 +32,7 @@ jobs:
           MEND_EMAIL: ${{ secrets.MEND_EMAIL }}
           MEND_USER_KEY: ${{ secrets.MEND_USER_KEY }}
         run: |
-          mend code -d "tests/"-s "Mitel UC Test//BB_MahabaleshwarHegde//GH_Jenkins_tests"
+          mend code -d "tests/" -s "Mitel UC Test//BB_MahabaleshwarHegde//GH_Jenkins_tests"
       
       - name: Run Mend Code Scan for componenet folder
         env:
@@ -40,4 +40,4 @@ jobs:
           MEND_EMAIL: ${{ secrets.MEND_EMAIL }}
           MEND_USER_KEY: ${{ secrets.MEND_USER_KEY }}
         run: |
-          mend code -d "components/"-s "Mitel UC Test//BB_MahabaleshwarHegde//GH_Jenkins_components"
+          mend code -d "components/" -s "Mitel UC Test//BB_MahabaleshwarHegde//GH_Jenkins_components"
