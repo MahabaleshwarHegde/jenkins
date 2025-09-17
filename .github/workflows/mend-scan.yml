@@ -1,0 +1,31 @@
+name: Mend Scan on Push
+
+on:
+  push:            # runs on every commit pushed
+    branches: 
+      - "**"       # all branches
+  pull_request:    # optional: also run on PRs
+
+jobs:
+  mend-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download Mend CLI
+        run: |
+          curl -fsSL https://downloads.mend.io/cli/linux_amd64/mend -o /usr/local/bin/mend
+          chmod +x /usr/local/bin/mend
+
+      - name: Authenticate with Mend
+        env:
+          MEND_URL: ${{ secrets.MEND_URL }}
+          MEND_EMAIL: ${{ secrets.MEND_EMAIL }}
+          MEND_USER_KEY: ${{ secrets.MEND_USER_KEY }}
+        run: mend auth login
+
+      - name: Run Mend Code Scan
+        run: |
+          mend code -s "Mend GIT Integration//GH_jenkins//GH_Components"
