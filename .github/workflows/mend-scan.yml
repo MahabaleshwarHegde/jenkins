@@ -19,12 +19,12 @@ jobs:
           curl -fsSL https://downloads.mend.io/cli/linux_amd64/mend -o /usr/local/bin/mend
           chmod +x /usr/local/bin/mend
 
-      - name: Authenticate with Mend
-        env:
-          MEND_URL: ${{ secrets.MEND_URL }}
-          MEND_EMAIL: ${{ secrets.MEND_EMAIL }}
-          MEND_USER_KEY: ${{ secrets.MEND_USER_KEY }}
-        run: mend auth login
+      # - name: Authenticate with Mend
+      #   env:
+      #     MEND_URL: ${{ secrets.MEND_URL }}
+      #     MEND_EMAIL: ${{ secrets.MEND_EMAIL }}
+      #     MEND_USER_KEY: ${{ secrets.MEND_USER_KEY }}
+      #   run: mend auth login
 
       - name: Run Mend Code Scan
         run: |
