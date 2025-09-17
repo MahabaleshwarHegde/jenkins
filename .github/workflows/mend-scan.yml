@@ -27,5 +27,9 @@ jobs:
       #   run: mend auth login
 
       - name: Run Mend Code Scan
+        env:
+          MEND_URL: ${{ secrets.MEND_URL }}
+          MEND_EMAIL: ${{ secrets.MEND_EMAIL }}
+          MEND_USER_KEY: ${{ secrets.MEND_USER_KEY }}
         run: |
           mend code -s "Mend GIT Integration//GH_jenkins//GH_Components"
