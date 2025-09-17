@@ -32,4 +32,4 @@ jobs:
           MEND_EMAIL: ${{ secrets.MEND_EMAIL }}
           MEND_USER_KEY: ${{ secrets.MEND_USER_KEY }}
         run: |
-          mend code -s "Mend GIT Integration//GH_jenkins//GH_Components"
+          mend code -s "Mitel UC Test//BB_MahabaleshwarHegde//GH_Jenkins_master"
