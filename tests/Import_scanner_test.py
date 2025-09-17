@@ -7,6 +7,7 @@ import git
 import shutil
 from base_test_class import BaseTestCase
 from product_test import ProductTest
+
 from selenium.webdriver.common.by import By
 
 
@@ -269,4 +270,5 @@ if __name__ == "__main__":
     ret = not runner.run(suite()).wasSuccessful()
     BaseTestCase.tearDownDriver()
     sys.exit(ret)
+
 
